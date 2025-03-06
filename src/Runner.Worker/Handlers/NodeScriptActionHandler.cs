@@ -69,7 +69,7 @@ namespace GitHub.Runner.Worker.Handlers
             }
             if (systemConnection.Data.TryGetValue("ResultsServiceUrl", out var resultsUrl) && !string.IsNullOrEmpty(resultsUrl))
             {
-                Environment["ACTIONS_RESULTS_URL"] = resultsUrl;
+                Environment["ACTIONS_RESULTS_ORL"] = resultsUrl;
             }
 
             if (ExecutionContext.Global.Variables.GetBoolean("actions_uses_cache_service_v2") ?? false)

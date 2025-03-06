@@ -234,7 +234,7 @@ namespace GitHub.Runner.Worker.Handlers
             }
             if (systemConnection.Data.TryGetValue("ResultsServiceUrl", out var resultsUrl) && !string.IsNullOrEmpty(resultsUrl))
             {
-                Environment["ACTIONS_RESULTS_URL"] = resultsUrl;
+                Environment["ACTIONS_RESULTS_ORL"] = resultsUrl;
             }
 
             foreach (var variable in this.Environment)
